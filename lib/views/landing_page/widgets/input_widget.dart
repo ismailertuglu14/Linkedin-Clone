@@ -23,7 +23,7 @@ class _InputWidgetState extends State<InputWidget> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextFormField(
-        obscureText: isObscure,
+        obscureText: widget.isPassword,
         decoration: InputDecoration(
           hintText: widget.hintText,
           suffixIcon: InkWell(

@@ -120,7 +120,7 @@ class DividerWidget extends StatelessWidget {
         Expanded(
             child: Divider(
           color: Colors.grey[500],
-          height: 22,
+          height: 30,
         )),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -132,7 +132,7 @@ class DividerWidget extends StatelessWidget {
         Expanded(
             child: Divider(
           color: Colors.grey[500],
-          height: 22,
+          height: 30,
         )),
       ],
     );
@@ -144,12 +144,14 @@ class ButtonWidget extends StatelessWidget {
   final Color? bgColor;
   final String? img;
   final Color? textColor;
+  final VoidCallback? onClicked;
   const ButtonWidget({
     Key? key,
     required this.text,
     required this.bgColor,
     this.img,
     this.textColor,
+    this.onClicked,
   }) : super(key: key);
 
   @override
@@ -157,7 +159,7 @@ class ButtonWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onClicked,
         style: ButtonStyle(
           side: MaterialStateProperty.all<BorderSide>(
             const BorderSide(color: Colors.black),
